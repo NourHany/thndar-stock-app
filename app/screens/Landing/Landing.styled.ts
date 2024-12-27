@@ -12,9 +12,8 @@ export const Container = styled(View)`
 `;
 
 export const Card = styled(View)`
-  flex: 1;
-  width: 200px;
-  height: 150px;
+  width: 180px;
+  height: 100px;
   background-color: #1e1e1e;
   border: 1px solid #333;
   border-radius: 8px;

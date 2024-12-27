@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useCallback, useEffect, useState} from 'react';
-import {FlatList, View, StyleSheet, RefreshControl} from 'react-native';
+import {FlatList, StyleSheet, RefreshControl} from 'react-native';
 import {debounce} from 'lodash';
 
 import {useFetchStocks} from '../../hooks/useFetchStocks';
@@ -49,11 +49,9 @@ const Landing = () => {
 
   const renderItem = ({item}: {item: Ticker}) => {
     return (
-      <View style={styles.cardContainer}>
-        <Card>
-          <ListItem item={item} />
-        </Card>
-      </View>
+      <Card>
+        <ListItem item={item} />
+      </Card>
     );
   };
 
@@ -87,13 +85,10 @@ const styles = StyleSheet.create({
   listContent: {
     paddingHorizontal: 10,
     paddingTop: 10,
+    justifyContent: 'center',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 8,
-    justifyContent: 'space-between',
-  },
-  cardContainer: {
-    flex: 1,
+    gap: 16,
   },
 });
 
